@@ -1,0 +1,147 @@
+\documentclass[letterpaper,10.8pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{amssymb}
+\renewcommand{\familydefault}{\rmdefault}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\usepackage[letterpaper,left=0.35in,right=0.35in,top=0.2in,bottom=0.5in]{geometry}
+\addtolength{\oddsidemargin}{3pt}
+\addtolength{\evensidemargin}{3pt}
+\addtolength{\textwidth}{-6pt}
+\addtolength{\topmargin}{3pt}
+\addtolength{\textheight}{-6pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\definecolor{accent}{RGB}{28,54,92}
+\definecolor{subtle}{RGB}{95,99,104}
+\definecolor{rulegray}{RGB}{176,184,196}
+\hypersetup{colorlinks=true, urlcolor=subtle, linkcolor=subtle}
+\titleformat{\section}{\vspace{-3pt}\color{accent}\normalsize\bfseries\raggedright}{}{0em}{\MakeUppercase}[{\color{rulegray}\titlerule[0.6pt]}\vspace{-2pt}]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
+
+\newcommand{\resumeItem}[1]{\item{#1 \vspace{-1pt}}}
+\newlength{\datewidth}
+\setlength{\datewidth}{1.15in}
+\newcommand{\datebox}[1]{\makebox[\datewidth][r]{\color{subtle}#1}}
+\newcommand{\roleHeading}[3]{%
+    \vspace{2pt}\item
+    \makebox[\textwidth][l]{%
+      #1\hspace{6pt}{\color{rulegray}$\vert$}\hspace{6pt}{\color{accent}\textbf{#2}}%
+      \hfill\datebox{#3}%
+    }\vspace{-3pt}%
+}
+\newcommand{\resumeProjectHeading}[2]{%
+    \vspace{2pt}\item
+    \makebox[\textwidth][l]{#1\hfill\datebox{#2}}\vspace{-3pt}%
+}
+\newcommand{\demo}[1]{\href{#1}{\textbf{DEMO}}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=1.2em, label={\color{accent}\scriptsize$\bullet$}, itemsep=1.2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\begin{document}
+
+\begin{center}
+{\color{accent}\LARGE\textbf{Vaishnavi S}}\\[5pt]
+(517)-348-6511 $|$ svaishna@msu.edu $|$ \href{https://vaishnavi-1328.github.io/github-portfolio/}{Portfolio} $|$ \href{https://github.com/vaishnavi-1328}{GitHub} $|$ Pittsburg(Willing to relocate) $|$ U.S. work authorized
+\end{center}
+\begin{center}\textbf{AI/ML engineer with 3+ years of experience building Python projects in AI and Machine learning}\end{center}
+
+\section*{Technical Skills}
+\vspace{5pt}
+\resumeItemListStart
+\resumeItem{\textbf{AI Platforms \& Agents:} Copilot Studio, Power Automate, AI Agents and Copilots (LangGraph, Claude API ),RAG Pipelines, Ollama, RAGAS, DeepEval,\textbf{ n8n, Zapier}, MCP, LLM evaluation, prompt engineering}
+\resumeItem{\textbf{Programming \& Cloud:} Python, Go, BigQuery, SQL, NoSQL, PySpark, GCP, Azure, AWS, Databricks, FastAPI, CI/CD, React}
+\resumeItem{\textbf{Databases \& Reporting:}Snowflake, Tableau, PowerBI, pgvector, DBT, PostgreSQL, Docker, Github, Docker, Airflow, S3, EC2} 
+\resumeItem{\textbf{Cloud, Data \& Documentation:} Delta Lake architectures, Blue-Green Deployments, Multi-Region Failover strategies, Data Governance}
+\resumeItemListEnd
+
+\section*{Work Experience}
+\vspace{4pt}
+\resumeSubHeadingListStart
+\roleHeading{BORGWARNER}{Data Scientist}{10/2025 -- 05/2026}
+\resumeItemListStart
+\resumeItem{\textbf{AI Agent Automation:} Built a LangGraph multi-agent system using Claude API tool use that pulls S\&P Global data into Power BI dashboards, replacing manual PowerPoint decks and cutting \{20 hours of work to 5 minutes}.}
+\resumeItem{\textbf{Testing \& Risk Review:} Validated agent and RAG answers over financial documents with \{RAGAS, DeepEval }hallucination detection and LLM-as-judge scoring, then tuned prompts and retrieval for accuracy.}
+\resumeItem{\textbf{Copilot Studio \& Power Platform:} Built a Copilot Studio agent with Power Automate flows that answers energy consumption projections from internal forecasting models; Built LSTM and XGBoost models for forecasting that maintained RMSE of 5KW.}
+\resumeItem{\textbf{Complaint matching:} Built a similarity search model by embedding historical records on Pinecone and used HNSW algorithm to retreive records to classify new records. Deployed as Microservice for a multiagentic chatbot. Monitored via Grafana; improved latency\textbf{ 25\%}}
+
+\resumeItemListEnd
+
+\roleHeading{HENRY FORD HEALTH}{AI Engineering Capstone}{02/2026 -- 05/2026}
+\resumeItemListStart
+\resumeItem{\textbf{Clinical AI Pipeline:} Built a patient--clinician communication pipeline using \textbf{Python, FastAPI, DBT, and LLMs} to maintain longitudinal patient records, summarize clinical history, and generate context-aware health recommendations for physician review; automated personalized checkup reminders based on patient vitals and historical health trends.}
+\resumeItemListEnd
+
+\roleHeading{MICHIGAN STATE UNIVERSITY}{ML Research Assistant}{06/2025 -- 01/2026}
+\resumeItemListStart
+\resumeItem{\textbf{Agricultural LLM finetuning:} Fine-tuned an open-source LLM with LoRA (llama3:2.3b) on agricultural datasets and integrated Michigan satellite imagery for crop prediction; built a {RAG pipeline} with {pgvector/PostgreSQL} for agriculture knowledge retrieval and deployed the model using \textbf{FastAPI, Docker, and AWS Bedrock} as the inference backend for an Android chatbot.}
+\resumeItemListEnd
+
+\roleHeading{BOEING}{Data Scientist -- Aviation Insights}{07/2022 -- 08/2024}
+\resumeItemListStart
+
+\resumeItem{\textbf{Deployment engineering:} Engineered \textbf{GitLab CI/CD} workflows with \textbf{Docker, blue-green deployments, automated health checks, traffic switching, and East/West multi-region failover}; introduced rollback and deployment validation gates that reduced release cycles by 85\% while maintaining \textbf{zero-downtime production releases}.}
+
+\resumeItem{\textbf{Databricks workflows:} Developed distributed \textbf{PySpark} ETL pipelines on \textbf{Azure Databricks} to ingest from FlightRadar24 through EventHub, transform, and validate 5M+ daily flight and telemetry records; implemented \textbf{Delta Lake} incremental processing and optimized partitioning, publishing curated datasets into \textbf{Snowflake} star schemas for Tableau and Power BI analytics.}
+
+\resumeItem{\textbf{Cross team collaboration for AI \& RAG:} Built a \textbf{Python RAG pipeline} across 10,000+ aircraft maintenance and repair manuals using document chunking, \textbf{LLM embeddings, pgvector, semantic retrieval, metadata filtering, and reranking}; exposed grounded responses through \textbf{FastAPI} and reduced maintenance-information retrieval from 2 hours to under 1 minute.}
+
+\resumeItem{\textbf{ML Lifecycle \& Observability:} Productionized ML workflows with \textbf{MLflow} experiment tracking, model registry, versioning, and reproducible training pipelines; implemented \textbf{SHAP/LIME explainability, A/B validation, Grafana/Prometheus monitoring, and model performance checks} to detect regressions and validate releases before production rollout.}
+
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section*{Projects}
+\resumeSubHeadingListStart
+\resumeProjectHeading{Corewell Dashboard\hspace{6pt}{\color{rulegray}$\vert$}\hspace{6pt}\demo{https://capstonestt890.streamlit.app/}}{2026}
+\resumeItemListStart
+\resumeItem{Unified multi-source hospital data with SQL and delivered dashboards for operational decision-makers.}
+\resumeItemListEnd
+\vspace{-6pt}
+\resumeProjectHeading{Automated Supply Chain Management\hspace{6pt}{\color{rulegray}$\vert$}\hspace{6pt}\demo{https://www.linkedin.com/feed/update/urn:li:activity:7462167212804452352/}}{2026}
+\resumeItemListStart
+\resumeItem{Built an end-to-end platform with a FastAPI back end; its LSTM demand forecaster improved accuracy \textbf{25\%}}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+
+\section*{Education}
+\vspace{4pt}
+\resumeSubHeadingListStart
+\roleHeading{Michigan State University}{M.S. Data Science}{05/2026}
+\vspace{-15pt}
+\roleHeading{Ramaiah Institute of Technology}{B.E. Information Science \& Engineering}{ 2 Research papers published | 08/2022}
+\resumeSubHeadingListEnd
+\vspace{4pt}
+\section*{Certifications}\vspace{4pt}
+AWS Bedrock Generative AI (Coursera, 2025) $\cdot$ Claude AI 101 (Anthropic, 2025)
+\vspace{4pt}
+
+\end{document}
